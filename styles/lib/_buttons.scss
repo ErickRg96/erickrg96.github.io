@@ -1,0 +1,43 @@
+/************************************/
+/* $BUTTONS */
+/************************************/
+
+%btn {
+    cursor: pointer;
+    font-family: $secundary-font;
+    background-color: $color-highlighted;
+    color: $color-white;
+    border-radius: 1rem;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+
+/************************************/
+/* $ICONS */
+/************************************/
+
+%icon {
+    font-size: 74px;
+    color: $color-font-main;
+    cursor: pointer;
+
+    &:hover {
+        animation-name: icon-hover;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes icon-hover {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,362 @@
+@import "./lib/variables";
+@import "./lib/mixins";
+@import "./lib/buttons";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $color-background;
+}
+
+a {
+    text-decoration: none;
+}
+
+#particles-js {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: -1;
+}
+
+%section__title {
+    font-family: $primary-font;
+    font-weight: 500;
+    color: $color-highlighted;
+}
+
+// HEADER
+.header {
+    height: 60px;
+    width: 100vw;
+    position: fixed;
+    z-index: 999;
+
+    &__container {
+        @include max-width(1024px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 0;
+    }
+
+    &__logo {
+        height: 50px;
+    }
+
+    &__nav {
+        display: none;
+
+        @include respond-to(768px) {
+            display: block;
+        }
+    }
+
+    &__section {
+        color: $color-font-main;
+        font-family: $secundary-font;
+        font-weight: 700;
+        margin-left: 1em;
+    }
+}
+
+.panel {
+    position: fixed;
+    z-index: 500;
+    width: 100vw;
+    height: calc(100vh);
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 25px;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.2);
+
+    opacity: 0;
+
+    transform: translate(100%, 0);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+    // @include background-linear-gradient();
+
+    &__section {
+        font-size: 1.5em;
+        margin-bottom: 2em;
+        font-family: $secundary-font;
+        color: $color-white;
+        font-weight: 500;
+
+        &:nth-child(1) {
+            margin-top: 1em;
+        }
+    }
+
+    &.is-active {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+.panel-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0;
+    outline: none;
+    height: 25px;
+    width: 30px;
+
+    & .hamburger-inner {
+        width: 30px;
+        height: 3px;
+        background-color: $color-font-main;
+
+        &::before,
+        &::after {
+            width: 30px;
+            height: 3px;
+            background-color: $color-font-main;
+        }
+    }
+
+    @include respond-to(768px) {
+        display: none;
+    }
+}
+
+// HOME
+.home {
+    height: calc(100vh);
+    padding-top: 70px;
+
+    &__container {
+        @include max-width(1024px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: calc(100vh - 70px);
+        font-family: $primary-font;
+    }
+
+    &__name,
+    &__description {
+        font-weight: 500;
+    }
+
+    &__name span,
+    &__description span {
+        color: $color-highlighted;
+        font-weight: 700;
+    }
+}
+
+// ABOUT
+.about {
+    padding-top: 65px;
+
+    &__container {
+        @include max-width(1024px);
+    }
+
+    &__title {
+        @extend %section__title;
+    }
+
+    &__description {
+        font-family: $secundary-font;
+        font-weight: 400;
+        color: $color-font-secundary;
+        line-height: 1.3em;
+
+        & p {
+            margin-top: 1em;
+        }
+    }
+
+    &__skills {
+        margin: 2em;
+    }
+
+    &__title--skills {
+        @extend %section__title;
+        color: $color-font-main;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    &__icons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+
+        @include respond-to(425px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include respond-to(768px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    &__skill {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1em;
+    }
+
+    &__icon {
+        @extend %icon;
+
+        &-name {
+            font-family: $secundary-font;
+            font-size: 1.2em;
+            margin-top: 5px;
+            letter-spacing: 3px;
+        }
+    }
+}
+
+.fa-html5:hover {
+    color: $color-html;
+}
+
+.fa-css3-alt:hover {
+    color: $color-css;
+}
+
+.fa-js:hover {
+    color: $color-js;
+}
+
+.fa-sass:hover {
+    color: $color-sass;
+}
+
+.fa-git-alt:hover {
+    color: $color-git;
+}
+
+.fa-github:hover {
+    color: $color-github;
+}
+
+.fa-terminal:hover {
+    color: $color-terminal;
+}
+
+.fa-npm:hover {
+    color: $color-npm;
+}
+
+// PROJECTS
+.projects {
+    padding-top: 65px;
+
+    &__container {
+        @include max-width(1024px);
+    }
+
+    &__title {
+        @extend %section__title;
+    }
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0 4em;
+
+    @include respond-to(768px) {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__image {
+        width: 80%;
+        max-width: 550px;
+        margin: 0 auto;
+        margin-bottom: 1em;
+
+        @include respond-to(768px) {
+            width: 55%;
+            margin-bottom: 0em;
+        }
+    }
+
+    &__details {
+        @include respond-to(768px) {
+            margin-left: 3em;
+            width: 45%;
+        }
+    }
+
+    &__name {
+        font-size: 24px;
+        font-family: $primary-font;
+        color: $color-font-main;
+        font-weight: 500;
+        margin-bottom: 0.5em;
+    }
+
+    &__stack {
+        font-size: 20px;
+        font-family: $primary-font;
+        color: $color-font-main;
+        font-weight: 500;
+        margin-bottom: 0.5em;
+    }
+
+    &__description {
+        font-size: 16px;
+        font-family: $secundary-font;
+        color: $color-font-secundary;
+        margin-bottom: 1.5em;
+        font-weight: 300;
+    }
+
+    &__button {
+        @extend %btn;
+        margin-right: 1em;
+    }
+}
+
+.separator {
+    color: $color-highlighted;
+}
+
+// CONTACT
+.contact {
+    padding-top: 65px;
+
+    &__container {
+        @include max-width(1024px);
+    }
+
+    &__title {
+        @extend %section__title;
+    }
+
+    &__icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__icon {
+        @extend %icon;
+        font-size: 50px;
+        margin: 0 0.5em;
+    }
+}
