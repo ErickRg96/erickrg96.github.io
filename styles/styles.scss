@@ -14,6 +14,7 @@ html {
 
 body {
     background-color: $color-background;
+    overflow-x: hidden;
 }
 
 a {
@@ -38,33 +39,49 @@ a {
     height: 60px;
     width: 100vw;
     position: fixed;
-    z-index: 999;
+    z-index: 200;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+    background-color: $color-background;
+
+    &.without-shadow {
+        box-shadow: none;
+    }
 
     &__container {
         @include max-width(1024px);
         display: flex;
         align-items: center;
         justify-content: space-between;
+        height: 100%;
         padding: 5px 0;
     }
 
     &__logo {
-        height: 50px;
+        height: 40px;
     }
 
     &__nav {
         display: none;
 
         @include respond-to(768px) {
-            display: block;
+            display: flex;
+            align-items: center;
         }
     }
 
     &__section {
+        font-size: 12px;
+        font-family: $primary-font;
         color: $color-font-main;
-        font-family: $secundary-font;
-        font-weight: 700;
-        margin-left: 1em;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-left: 1.5em;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            color: $color-highlighted;
+            transform: translateY(-5px);
+        }
     }
 }
 
@@ -72,28 +89,31 @@ a {
     position: fixed;
     z-index: 500;
     width: 100vw;
-    height: calc(100vh);
-    padding-top: 50px;
+    top: 60px;
+    bottom: 0;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    padding-right: 25px;
-    backdrop-filter: blur(5px);
-    background: rgba(0, 0, 0, 0.2);
-
+    align-items: center;
+    justify-content: center;
+    background-color: $color-background;
+    display: flex;
+    transition: 1s all ease-in-out;
+    transform: translate(-100%, 0);
     opacity: 0;
 
-    transform: translate(100%, 0);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-
-    // @include background-linear-gradient();
-
     &__section {
-        font-size: 1.5em;
+        font-size: 1em;
         margin-bottom: 2em;
-        font-family: $secundary-font;
-        color: $color-white;
+        letter-spacing: 1px;
+        font-family: $primary-font;
+        color: $color-font-main;
+        text-transform: uppercase;
         font-weight: 500;
+        transition: 0.3s all ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
 
         &:nth-child(1) {
             margin-top: 1em;
@@ -110,22 +130,35 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    padding: 0;
     outline: none;
     height: 25px;
-    width: 30px;
+    width: 25px;
+
+    & .hamburger-box {
+        margin-right: 25px;
+        height: 25px;
+        width: 25px;
+    }
 
     & .hamburger-inner {
-        width: 30px;
+        width: 25px;
         height: 3px;
-        background-color: $color-font-main;
+        background-color: $color-highlighted;
 
         &::before,
         &::after {
-            width: 30px;
+            width: 25px;
             height: 3px;
-            background-color: $color-font-main;
+            background-color: $color-highlighted;
+        }
+    }
+
+    &.is-active .hamburger-inner {
+        background-color: $color-highlighted;
+
+        &::before,
+        &::after {
+            background-color: $color-highlighted;
         }
     }
 
@@ -137,7 +170,7 @@ a {
 // HOME
 .home {
     height: calc(100vh);
-    padding-top: 70px;
+    padding-top: 75px;
 
     &__container {
         @include max-width(1024px);
@@ -152,6 +185,7 @@ a {
     &__name,
     &__description {
         font-weight: 500;
+        text-align: center;
     }
 
     &__name span,
@@ -163,7 +197,7 @@ a {
 
 // ABOUT
 .about {
-    padding-top: 65px;
+    padding-top: 75px;
 
     &__container {
         @include max-width(1024px);
@@ -262,7 +296,7 @@ a {
 
 // PROJECTS
 .projects {
-    padding-top: 65px;
+    padding-top: 75px;
 
     &__container {
         @include max-width(1024px);
@@ -322,8 +356,11 @@ a {
         font-size: 16px;
         font-family: $secundary-font;
         color: $color-font-secundary;
-        margin-bottom: 1.5em;
         font-weight: 300;
+    }
+
+    &__buttons {
+        margin-top: 25px;
     }
 
     &__button {
@@ -338,7 +375,7 @@ a {
 
 // CONTACT
 .contact {
-    padding-top: 65px;
+    padding-top: 30px;
 
     &__container {
         @include max-width(1024px);
@@ -348,10 +385,26 @@ a {
         @extend %section__title;
     }
 
+    &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__mail {
+        height: 40px;
+
+        &-image {
+            height: 40px;
+            width: 200px;
+        }
+    }
+
     &__icons {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 20px 0 30px;
     }
 
     &__icon {

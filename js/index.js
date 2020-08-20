@@ -5,6 +5,12 @@ function hamburguerMenu(panelBtn, panel) {
     panelBtn.addEventListener("click", () => {
         panel.classList.toggle("is-active");
         panelBtn.classList.toggle("is-active");
+
+        if (panel.classList.contains("is-active")) {
+            document.getElementsByTagName("html")[0].style.overflow = "hidden";
+        } else {
+            document.getElementsByTagName("html")[0].style.overflow = "auto";
+        }
     });
 
     document.addEventListener("click", (e) => {
