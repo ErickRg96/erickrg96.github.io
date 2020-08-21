@@ -4,12 +4,83 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#32afb2" />
+
+        <link
+            rel="apple-touch-icon"
+            sizes="57x57"
+            href="./assets/favicon/apple-icon-57x57.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="60x60"
+            href="./assets/favicon/apple-icon-60x60.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="./assets/favicon/apple-icon-72x72.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="76x76"
+            href="./assets/favicon/apple-icon-76x76.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="114x114"
+            href="./assets/favicon/apple-icon-114x114.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="./assets/favicon/apple-icon-120x120.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="144x144"
+            href="./assets/favicon/apple-icon-144x144.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            href="./assets/favicon/apple-icon-152x152.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./assets/favicon/apple-icon-180x180.png"
+        />
         <link
             rel="icon"
-            type="image/ico"
-            sizes="16x16"
-            href="./assets/images/favicon.ico"
+            type="image/png"
+            sizes="192x192"
+            href="./assets/favicon/android-icon-192x192.png"
         />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="./assets/favicon/favicon-96x96.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./assets/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./assets/favicon/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta
+            name="msapplication-TileImage"
+            content="./assets/favicon/ms-icon-144x144.png"
+        />
+
         <title>Erick Reyes | Frontend Developer</title>
         <link
             rel="stylesheet"
@@ -25,6 +96,10 @@
                 <a href="/#home">
                     <img
                         src="./assets/images/logo.png"
+                        srcset="
+                            ./assets/images/logo.png,
+                            ./assets/images/logo@2x.png 2x
+                        "
                         alt="Logo"
                         class="header__logo"
                     />
@@ -41,17 +116,17 @@
                 </button>
 
                 <nav class="header__nav">
-                    <a href="/#about" class="header__section">Sobre mí</a>
-                    <a href="/#projects" class="header__section">Proyectos</a>
-                    <a href="/#contact" class="header__section">Contacto</a>
+                    <a href="#about" class="header__section">Sobre mí</a>
+                    <a href="#projects" class="header__section">Proyectos</a>
+                    <a href="#contact" class="header__section">Contacto</a>
                 </nav>
             </div>
         </header>
 
         <aside class="panel" id="panel">
-            <a href="/#about" class="panel__section">Sobre mí</a>
-            <a href="/#projects" class="panel__section">Proyectos</a>
-            <a href="/#contact" class="panel__section">Contacto</a>
+            <a href="#about" class="panel__section">Sobre mí</a>
+            <a href="#projects" class="panel__section">Proyectos</a>
+            <a href="#contact" class="panel__section">Contacto</a>
         </aside>
 
         <section class="home" id="home">
@@ -125,6 +200,10 @@
                 <article class="project">
                     <img
                         src="./assets/images/netflix-clone.png"
+                        srcset="
+                            ./assets/images/netflix-clone.png,
+                            ./assets/images/netflix-clone@2x.png 2x
+                        "
                         alt="Project image"
                         class="project__image"
                     />
@@ -167,6 +246,10 @@
                 <article class="project">
                     <img
                         src="./assets/images/rick-and-morty.png"
+                        srcset="
+                            ./assets/images/rick-and-morty.png,
+                            ./assets/images/rick-and-morty@2x.png 2x
+                        "
                         alt="Project image"
                         class="project__image"
                     />
@@ -209,6 +292,10 @@
                 <article class="project">
                     <img
                         src="./assets/images/insure-landing-page.png"
+                        srcset="
+                            ./assets/images/insure-landing-page.png,
+                            ./assets/images/insure-landing-page@2x.png 2x
+                        "
                         alt="Project image"
                         class="project__image"
                     />
@@ -243,6 +330,10 @@
                 <article class="project">
                     <img
                         src="./assets/images/fylo-landing-page.png"
+                        srcset="
+                            ./assets/images/fylo-landing-page.png,
+                            ./assets/images/fylo-landing-page@2x.png 2x
+                        "
                         alt="Project image"
                         class="project__image"
                     />
@@ -285,8 +376,12 @@
                         href="mailto:erguzman96@gmail.com"
                         target="_blank"
                         class="contact__mail"
-                        ><img src="./assets/images/erguzman96@gmail.com.png" alt="email" class="contact__mail-image"></a
-                    >
+                        ><img
+                            src="./assets/images/erguzman96@gmail.com.png"
+                            alt="email"
+                            class="contact__mail-image"
+                    /></a>
+
                     <div class="contact__icons">
                         <a
                             href="https://www.linkedin.com/in/erick-reyes-guzman/"
