@@ -188,6 +188,10 @@ a {
         text-align: center;
     }
 
+    &__description {
+        font-size: 18px;
+    }
+
     &__name span,
     &__description span {
         color: $color-highlighted;
@@ -411,5 +415,7 @@ a {
         @extend %icon;
         font-size: 50px;
         margin: 0 0.5em;
+        display: flex;
+        flex-direction: column;
     }
 }

@@ -311,6 +311,10 @@ a {
   text-align: center;
 }
 
+.home__description {
+  font-size: 18px;
+}
+
 .home__name span,
 .home__description span {
   color: #32afb2;
@@ -563,5 +567,12 @@ a {
 .contact__icon {
   font-size: 50px;
   margin: 0 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 /*# sourceMappingURL=styles.css.map */
