@@ -222,6 +222,13 @@ a {
         }
     }
 
+    &__button-cv {
+        @extend %btn;
+        margin-top: 1em;
+        font-weight: 500;
+        display: inline-block;
+    }
+
     &__skills {
         margin: 2em;
     }
@@ -389,6 +396,15 @@ a {
         @extend %section__title;
     }
 
+    &__p {
+        font-family: $secundary-font;
+        color: $color-font-main;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
     &__links {
         display: flex;
         flex-direction: column;
@@ -408,7 +424,7 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 20px 0 30px;
+        margin: 10px 0 30px;
     }
 
     &__icon {
@@ -418,4 +434,12 @@ a {
         display: flex;
         flex-direction: column;
     }
+}
+
+.fa-linkedin:hover {
+    color: $color-linkedin;
+}
+
+.fa-github-square:hover {
+    color: $color-github;
 }

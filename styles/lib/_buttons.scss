@@ -7,13 +7,15 @@
     font-family: $secundary-font;
     background-color: $color-highlighted;
     color: $color-white;
+    display: inline-block;
     border-radius: 1rem;
     padding: 10px 20px;
     text-transform: uppercase;
     transition: 1s ease all;
 
     &:hover {
-        background-color: darken($color-highlighted, 25%);
+        background-color: darken($color-highlighted, 5%);
+        transform: scale(1.1);
     }
 }
 

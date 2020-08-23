@@ -86,10 +86,6 @@
         />
 
         <title>Erick Reyes | Frontend Developer</title>
-        <!-- <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css"
-        /> -->
         <link rel="stylesheet" href="./styles/hamburger.css" />
         <link rel="stylesheet" href="./styles/styles.css" />
     </head>
@@ -144,16 +140,28 @@
 
         <section class="about" id="about">
             <div class="about__container">
-                <h2 class="about__title">Acerca de mi</h2>
+                <h2 class="about__title">Acerca de mí</h2>
                 <section class="about__description">
                     <p>
-                        Soy Erick Reyes. Vivo en la Ciudad de México. Apasionado
-                        por la tecnologia y la programacion.
+                        Soy Erick Reyes. Vivo en Ciudad de México. Apasionado
+                        por la tecnología y la programación.
                     </p>
                     <p>
-                        Me encanta aprender cosas nuevas y me considero una
-                        persona autodidacta gusta de aprender constantemente.
+                        El gusto por la programación me llevo a estudiar
+                        Ingeniería en Computación, donde conocí las áreas en las
+                        cuales me podria enfocar para ejercer una carrera
+                        profesional en este campo, fue así que elegí enfocarme
+                        en el desarrollo de software, específicamente en el
+                        desarrollo web.
                     </p>
+
+                    <a
+                        href="https://drive.google.com/file/d/1M07afATzkXBomcmWGOLWLuW2qraR5DBS/view?usp=sharing"
+                        class="about__button-cv"
+                        target="_blank"
+                        rel="noreferrer"
+                        >Consulta mi CV</a
+                    >
                 </section>
 
                 <section class="about__skills">
@@ -228,7 +236,7 @@
                         </h4>
                         <p class="project__description">
                             Single Page App donde se hace uso de una API para
-                            obtener el catalogo de peliculas y series.
+                            obtener el catálogo de películas y series.
                         </p>
                         <div class="project__buttons">
                             <a
@@ -276,7 +284,7 @@
                         </h4>
                         <p class="project__description">
                             Single Page App donde se listan los principales
-                            personajes de la seria y los detalles de cada uno de
+                            personajes de la serie y los detalles de cada uno de
                             ellos.
                         </p>
                         <div class="project__buttons">
@@ -384,13 +392,20 @@
             <div class="contact__container">
                 <h2 class="contact__title">Contáctame</h2>
                 <div class="contact__links">
+                    <p class="contact__p">
+                        Me puedes contactar por los siguientes medios:
+                    </p>
                     <a
                         href="mailto:erguzman96@gmail.com"
                         target="_blank"
                         class="contact__mail"
                         rel="noreferrer"
                         ><img
-                            src="./assets/images/mail.png"
+                            src="./assets/images/email.png"
+                            srcset="
+                                ./assets/images/email.png,
+                                ./assets/images/email@2x.png 2x
+                            "
                             alt="email"
                             class="contact__mail-image"
                     /></a>
@@ -413,7 +428,6 @@
             </div>
         </section>
 
-        <!-- <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
         <script src="./js/particles.min.js"></script>
         <script src="./js/particle-config.js"></script>
         <script src="./js/index.js"></script>

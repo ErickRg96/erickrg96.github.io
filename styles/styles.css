@@ -11,11 +11,12 @@
 /************************************/
 /* $BUTTONS */
 /************************************/
-.project__button {
+.about__button-cv, .project__button {
   cursor: pointer;
   font-family: "Muli", sans-serif;
   background-color: #32afb2;
   color: #fafafa;
+  display: inline-block;
   border-radius: 1rem;
   padding: 10px 20px;
   text-transform: uppercase;
@@ -23,8 +24,10 @@
   transition: 1s ease all;
 }
 
-.project__button:hover {
-  background-color: #164d4e;
+.about__button-cv:hover, .project__button:hover {
+  background-color: #2c9b9e;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 /************************************/
@@ -343,6 +346,12 @@ a {
   margin-top: 1em;
 }
 
+.about__button-cv {
+  margin-top: 1em;
+  font-weight: 500;
+  display: inline-block;
+}
+
 .about__skills {
   margin: 2em;
 }
@@ -529,6 +538,15 @@ a {
   width: 90%;
 }
 
+.contact__p {
+  font-family: "Muli", sans-serif;
+  color: #212529;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
 .contact__links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -561,7 +579,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 20px 0 30px;
+  margin: 10px 0 30px;
 }
 
 .contact__icon {
@@ -574,5 +592,13 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.fa-linkedin:hover {
+  color: #0073b1;
+}
+
+.fa-github-square:hover {
+  color: #7f3f7c;
 }
 /*# sourceMappingURL=styles.css.map */
