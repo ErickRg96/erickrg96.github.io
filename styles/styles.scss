@@ -248,10 +248,6 @@ a {
         @include respond-to(425px) {
             grid-template-columns: repeat(3, 1fr);
         }
-
-        @include respond-to(768px) {
-            grid-template-columns: repeat(4, 1fr);
-        }
     }
 
     &__skill {
@@ -283,6 +279,10 @@ a {
 
 .fa-js:hover {
     color: $color-js;
+}
+
+.fa-react:hover {
+    color: $color-react;
 }
 
 .fa-sass:hover {

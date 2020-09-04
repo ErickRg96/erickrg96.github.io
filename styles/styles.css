@@ -377,13 +377,6 @@ a {
   }
 }
 
-@media only screen and (min-width: 768px) {
-  .about__icons {
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
-  }
-}
-
 .about__skill {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -415,6 +408,10 @@ a {
 
 .fa-js:hover {
   color: #ffda3e;
+}
+
+.fa-react:hover {
+  color: #61dafb;
 }
 
 .fa-sass:hover {
