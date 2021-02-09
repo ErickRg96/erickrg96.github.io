@@ -186,9 +186,7 @@ a {
   width: 100vw;
   top: 60px;
   bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -200,7 +198,6 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #e9e9e9;
-  display: flex;
   -webkit-transition: 1s all ease-in-out;
   transition: 1s all ease-in-out;
   -webkit-transform: translate(-100%, 0);
@@ -233,6 +230,9 @@ a {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
   opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .panel-btn {
